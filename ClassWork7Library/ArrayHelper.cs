@@ -98,7 +98,22 @@ namespace ClassWork7Library
             }
         }
 
-        private static void Swap(ref int a, ref int b)
+        public static bool ContainsDigits(string str)
+        {
+            bool result = false;
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (char.IsDigit(str[i]))
+                {
+                    result = true;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
+        public static void Swap(ref int a, ref int b)
         {
             int temp = a;
             a = b;
